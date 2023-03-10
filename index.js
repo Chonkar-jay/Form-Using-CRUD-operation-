@@ -32,7 +32,15 @@ function add()
     document.getElementsByClassName("age").innerHTML = localStorage.getItem("age",age);
 }
 
-
+// function validateForm(){
+//     var nameRegex = /^[a-zA-Z\-]+$/;
+//     var validUsername = document.getElementsById("uName").value.match(nameRegex);
+//     if(validUsername == null){
+//         alert("Your first name is not valid. Only characters A-Z, a-z and '-' are  acceptable.");
+//         document.getElementById("uName").focus();
+//         return false;
+//     }
+// }
 
 // function addMember() {
 //   var x = document.getElementsByClassName("infoForm");

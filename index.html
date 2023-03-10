@@ -12,22 +12,22 @@
      
 </head>
 <body>
-
+<!-- 
     <div>
         <center><button class="add_member_button">Add Member</button></center>
     </div>
     <div>
         <center><a href="#"><button class="add_member_button">Delete Member</button></a></center>
     </div><br><br>
-    
+     -->
     <div class="row ">
         <div class="mx-auto col-10 col-md-8 col-lg-6">
-            <div class="row formInfo">
+            <div class="row "id="formInfo">
             <div class="col-sm-4">
                 Name: 
             </div>
             <div class="col-sm-8">
-                <input type="text" name="name" placeholder="Your Name..." id="uName">
+                <input type="text" name="name" onclick="validateForm()" placeholder="Your Name..." id="uName">
             </div>
             <div class="col-sm-4">
                 Email: 
@@ -82,14 +82,17 @@
                 <label><input type="checkbox" name="playing"> Playing </label>&nbsp;
             </div>
             <div class="col-sm-4">
-                Upload Your Photo: 
+                Upload Photo: 
             </div>
             <div class="col-sm-8">
                 <input type="file" name="upload_photo">
+            </div><br><br>
+            <div class="col-sm-4"> 
             </div>
-            <div>
+            <div class="col-sm-8">
                 <input type="submit" id="submit_btn" name="submit" value="Add Member" onclick="add()" >
             </div>
+            
         </div>
     </div>
     <p class="user"></p>
