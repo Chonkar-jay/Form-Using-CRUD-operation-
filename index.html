@@ -20,89 +20,103 @@
         <center><a href="#"><button class="add_member_button">Delete Member</button></a></center>
     </div><br><br>
      -->
-    <div class="row ">
+    <div class="row" onsubmit="formValidation()">
         <div class="mx-auto col-10 col-md-8 col-lg-6">
-            <div class="row "id="formInfo">
-            <div class="col-sm-4">
-                Name: 
+            <div class="row" id="formInfo">
+                <div class="col-sm-4">
+                    Name: 
+                </div>
+                <div class="col-sm-8">
+                    <input type="text" name="name" placeholder="Your Name..." id="uName" id="Fname">
+                </div>
+                <div class="col-sm-4">
+                    Email: 
+                </div>
+                <div class="col-sm-8">
+                    <input type="email" name="email" placeholder="Your Email Address..." id="uEmail">
+                </div>
+                <div class="col-sm-4">
+                    Phone Number: 
+                </div>
+                <div class="col-sm-8">
+                    <input type="tel" name="number" placeholder="Your Phone Number..." id="uNumber" id="Number">
+                </div>
+                <div class="col-sm-4">
+                    Birthdate: 
+                </div>
+                <div class="col-sm-8">
+                    <input type="date" name="bdate" id="bdate">
+                </div>
+                <div class="col-sm-4">
+                    Appointment Time: 
+                </div>
+                <div class="col-sm-8">
+                    <input type="time" name="time" id="uAppointment">
+                </div>
+                <div class="col-sm-4">
+                    Favourite Color: 
+                </div>
+                <div class="col-sm-8">
+                    <input type="color" name="name" placeholder="Your Name..." id="uFavColor">
+                </div>
+                <div class="col-sm-4">
+                    Payment Method: 
+                </div>
+                <div class="col-sm-8">
+                    <label><input type="radio" name="payment_method"> Net Banking </label>&nbsp;
+                    <label><input type="radio" name="payment_method"> By Cash </label>&nbsp;
+                    <label><input type="radio" name="payment_method"> Card Payment </label>&nbsp;
+                </div>
+                <div class="col-sm-4">
+                    Age: 
+                </div>
+                <div class="col-sm-8">
+                    <input type="range" name="age" id="uAge">
+                </div>
+                <div class="col-sm-4">
+                    Hobbies: 
+                </div>
+                <div class="col-sm-8">
+                    <label><input type="checkbox" name="writing"> Writing </label>&nbsp;
+                    <label><input type="checkbox" name="reading"> Reading </label>&nbsp;
+                    <label><input type="checkbox" name="playing"> Playing </label>&nbsp;
+                </div>
+                <div class="col-sm-4">
+                    Upload Photo: 
+                </div>
+                <div class="col-sm-8">
+                    <input type="file" name="upload_photo">
+                </div><br><br>
+                <div class="col-sm-4"> 
+                </div>
+                <div class="col-sm-8">
+                    <input type="submit" id="submit_btn" name="submit" value="Add Member" onclick="add()" onsubmit="formValidation()" >
+                </div>
             </div>
-            <div class="col-sm-8">
-                <input type="text" name="name" onclick="validateForm()" placeholder="Your Name..." id="uName">
-            </div>
-            <div class="col-sm-4">
-                Email: 
-            </div>
-            <div class="col-sm-8">
-                <input type="email" name="email" placeholder="Your Email Address..." id="uEmail">
-            </div>
-            <div class="col-sm-4">
-                Phone Number: 
-            </div>
-            <div class="col-sm-8">
-                <input type="tel" name="number" placeholder="Your Phone Number..." id="uNumber">
-            </div>
-            <div class="col-sm-4">
-                Birthdate: 
-            </div>
-            <div class="col-sm-8">
-                <input type="date" name="bdate" id="bdate">
-            </div>
-            <div class="col-sm-4">
-                Appointment Time: 
-            </div>
-            <div class="col-sm-8">
-                <input type="time" name="time" id="uAppointment">
-            </div>
-            <div class="col-sm-4">
-                Favourite Color: 
-            </div>
-            <div class="col-sm-8">
-                <input type="color" name="name" placeholder="Your Name..." id="uFavColor">
-            </div>
-            <div class="col-sm-4">
-                Payment Method: 
-            </div>
-            <div class="col-sm-8">
-                <label><input type="radio" name="payment_method"> Net Banking </label>&nbsp;
-                <label><input type="radio" name="payment_method"> By Cash </label>&nbsp;
-                <label><input type="radio" name="payment_method"> Card Payment </label>&nbsp;
-            </div>
-            <div class="col-sm-4">
-                Age: 
-            </div>
-            <div class="col-sm-8">
-                <input type="range" name="age" id="uAge">
-            </div>
-            <div class="col-sm-4">
-                Hobbies: 
-            </div>
-            <div class="col-sm-8">
-                <label><input type="checkbox" name="writing"> Writing </label>&nbsp;
-                <label><input type="checkbox" name="reading"> Reading </label>&nbsp;
-                <label><input type="checkbox" name="playing"> Playing </label>&nbsp;
-            </div>
-            <div class="col-sm-4">
-                Upload Photo: 
-            </div>
-            <div class="col-sm-8">
-                <input type="file" name="upload_photo">
-            </div><br><br>
-            <div class="col-sm-4"> 
-            </div>
-            <div class="col-sm-8">
-                <input type="submit" id="submit_btn" name="submit" value="Add Member" onclick="add()" >
-            </div>
-            
         </div>
     </div>
-    <p class="user"></p>
-    <p class="email"></p>
-    <p class="number"></p>
-    <p class="bdate"></p>
-    <p class="appointment"></p>
-    <p class="favcolor"></p>
-    <p class="age"></p>
+    <div id="formInfo">
+    <center><table border="1px" >
+        <tr class="added_member_table">
+            <th>Name</th>
+            <th>Email</th>
+            <th>Number</th>
+            <th>DOB</th>
+            <th>Appointment</th>
+            <th>Color</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td id="restore_user"></td>
+            <td id="restore_email"></td>
+            <td id="restore_number"></td>
+            <td id="restore_bdate"></td>
+            <td id="restore_appointment"></td>
+            <td id="restore_favcolor"></td>
+            <td id="restore_age"></td>
+        </tr>
+    </table></center>
+    </div>
 </body>
 <script src="index.js"></script>
 </html>
-

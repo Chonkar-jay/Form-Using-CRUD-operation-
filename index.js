@@ -1,7 +1,4 @@
-popup()
-{
-    alert("I am an alert box!");
-}
+
 function add() 
 {
     //data retriving
@@ -25,12 +22,37 @@ function add()
     //retriving data from local storage
     document.getElementsByClassName("user").innerHTML = localStorage.getItem("user",user);
     document.getElementsByClassName("email").innerHTML = localStorage.getItem("email",email);
-    document.getElementsByClassName("number").innerHTML = localStorag.getItem("number",number);
+    document.getElementsByClassName("number").innerHTML = localStorage.getItem("number",number);
     document.getElementsByClassName("bdate").innerHTML = localStorage.getItem("bdate",bdate);
     document.getElementsByClassName("appointment").innerHTML = localStorage.getItem("appointment",appointment);
     document.getElementsByClassName("favcolor").innerHTML = localStorage.getItem("favcolor",favcolor);
     document.getElementsByClassName("age").innerHTML = localStorage.getItem("age",age);
+
+    //restoring data to page
+    var username = localStorage.setItem("#restore_user",user);
+    window.localStorage.getItem("#restore_email",email);
+    var usernumber = localStorage.getItem("#restore_number",number);
+    var userbdate = localStorage.getItem("#restore_bdate",bdate);
+    var userappointment = localStorage.getItem("#restore_appointment",appointment);
+    var userfavcolor = localStorage.getItem("#restore_favcolor",favcolor);
+    var userage = localStorage.getItem("#restore_age",age);
 }
+function formValidation(){
+    var FirstName = document.getElementById("Fname").value;
+    var Number = document.getElementById("number").value;
+  
+    // var Email = document.getElementById("email").value;
+  
+    if (!isNaN(FirstName)) {
+      alert("Only Enter Name!");
+      return false;
+    }
+    if (isNaN(Number)) {
+      alert("Enter The Only Number !");
+      return false;
+    }
+  
+  }
 
 // function validateForm(){
 //     var nameRegex = /^[a-zA-Z\-]+$/;
